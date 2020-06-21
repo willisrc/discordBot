@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('message', message => {
+client.on('message', , function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
     console.log(message.content);
@@ -31,6 +31,7 @@ client.on('message', message => {
 	    case 'random':
                 var i = Math.floor(Math.random() * 1000000);
 		client.sendMessage({
+		    to: channelID,
                     message: 'http://www.nhentai.com/g/' + i
                 });
             break;
