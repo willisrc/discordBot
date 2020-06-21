@@ -31,7 +31,6 @@ client.on('message', message => {
 	    case 'random':
                 var i = Math.floor(Math.random() * 1000000);
 		client.sendMessage({
-                    to: message.channelID,
                     message: 'http://www.nhentai.com/g/' + i
                 });
             break;
