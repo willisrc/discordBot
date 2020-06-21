@@ -13,7 +13,7 @@ client.on('ready', () => {
  
 
 client.on('message', message => {
-
+    console.log(message);
     if (message.content === 'daddy') {
 
        message.reply('yes?');
