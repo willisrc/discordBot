@@ -5,7 +5,7 @@ client.on('message', message => {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
     console.log(message.channel.id);
-    const channel = <client>.channels.cache.get(message.channel.id);
+    const channel = client.channels.cache.get(message.channel.id);
     //console.log(message);
     if (message.content.substring(0, 1) == '!') {
         var args = message.content.substring(1).split(' ');
