@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('message', message => {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
-    console.log(message.content);
+    console.log(message);
     if (message.content.substring(0, 1) == '!') {
         var args = message.content.substring(1).split(' ');
         var cmd = args[0];
