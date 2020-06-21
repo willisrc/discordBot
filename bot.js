@@ -30,7 +30,7 @@ client.on('message', message => {
 	    // !random
 	    case 'random':
                 var i = Math.floor(Math.random() * 1000000);
-				bot.sendMessage({
+		client.sendMessage({
                     to: channelID,
                     message: 'http://www.nhentai.com/g/' + i
                 });
