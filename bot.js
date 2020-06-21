@@ -13,7 +13,7 @@ client.on('message', message => {
         switch(cmd) {
             // !help
 	    case 'help':
-                message.reply('UwU here is what I can do for you, senpai: \n\t!link ---> gimme those wacky 6 digits and I will give you the sauce \n\t!random ---> Your risky click of the day');
+                message.send('UwU here is what I can do for you, senpai: \n\t!link ---> gimme those wacky 6 digits and I will give you the sauce \n\t!random ---> Your risky click of the day');
             break;
 			
 	    // !sauce
