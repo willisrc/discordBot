@@ -22,7 +22,7 @@ client.on('message', message => {
 
 });
 
-bot.on('message', function (user, userID, channelID, message, evt) {
+client.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
     if (message.substring(0, 1) == '!') {
@@ -33,14 +33,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !help
 			case 'help':
-                bot.sendMessage({
+                client.sendMessage({
                     to: channelID,
                     message: 'UwU here is what I can do for you, senpai: \n\t!link ---> gimme those wacky 6 digits and I will give you the sauce \n\t!random ---> Your risky click of the day'
                 });
             break;
 			// !sauce
             case 'link':
-                bot.sendMessage({
+                client.sendMessage({
                     to: channelID,
                     message: 'http://www.nhentai.com/g/' + args
                 });
@@ -48,7 +48,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			// !random
 			case 'random':
                 var i = Math.floor(Math.random() * 1000000);
-				bot.sendMessage({
+				client.sendMessage({
                     to: channelID,
                     message: 'http://www.nhentai.com/g/' + i
                 });
