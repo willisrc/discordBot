@@ -21,9 +21,9 @@ client.on('message', message => {
           break;
 
     	    // !saucelink
-          case 'saucelink':
-            message.channel.send('http://www.nhentai.com/g/' + args);
-          break;
+          // case 'saucelink':
+          //   message.channel.send('http://www.nhentai.com/g/' + args);
+          // break;
 
     	    // !saucerandom
     	    case 'saucerandom':

@@ -7,8 +7,7 @@ Konichiwa Senpai! Slack-chan is here to fullfill all of your needs! This bot was
 !penissize/!dicksize - Find out what you're penis size is. I can tell you right now it's small
 !fetish - Wanna know you're fetish? I sure as hell don't. But I'll tell ya
 !copypasta - random copypasta 
-!saucelink - gimme those wacky 6 digits and i'll give you the sauce
 !saucerandom - Your risky click of the day
 
 --- Reactions ---
-There are some key words that'll set me off so look out for those 
+In addition to commands, there are some key words that will set me off
