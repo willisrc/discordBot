@@ -28,15 +28,17 @@ client.on('message', message => {
             var i = Math.floor(Math.random() * 101);
             message.channel.send('Odds are ' + i + "%");
           break;
+          // !copypasta
           case 'copypasta':
             const fs = require('fs')
             fs.readFile('files/copypastas.txt', (err, data) => {
               if (err) throw err;
               console.log(data.toString());
-            })
-            var arr = fs.toString().split('\n');
-            var i = Math.floor(Math.random() * arr.length);
-            message.channel.send(data.toString());
+
+              var arr = data.toString().split('\n');
+              var i = Math.floor(Math.random() * arr.length);
+              message.channel.send(arr[i]);
+            })    
           break;
          }
      }
