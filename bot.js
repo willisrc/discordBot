@@ -30,7 +30,7 @@ client.on('message', message => {
           break;
           case 'copypasta':
             const fs = require('fs')
-            fs.readFile('/files/copypastas.txt', (err, data) => {
+            fs.readFile('files/copypastas.txt', (err, data) => {
               if (err) throw err;
               console.log(data.toString());
             })
