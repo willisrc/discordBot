@@ -28,6 +28,11 @@ client.on('message', message => {
             var i = Math.floor(Math.random() * 101);
             message.channel.send('Odds are ' + i + "%");
           break;
+          case 'copypasta':
+            var arr = readTextFile('/files/copypastas.txt').split('\n');
+            var i = Math.floor(Math.random() * arr.length);
+            message.channel.send(arr[i]);
+          break;
          }
      }
      // Random Response Messages
@@ -49,3 +54,22 @@ client.on('message', message => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
+// FUNCTIONS
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
