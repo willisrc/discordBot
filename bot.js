@@ -12,7 +12,7 @@ client.on('message', message => {
         switch(cmd) {
           // !help
     	    case 'help':
-            message.channel.send('UwU what can do for you, senpai? This command is still under development');
+            message.channel.send('UwU what can do for you, senpai? I can do anything you want :P');
           break;
     	    // !link
           case 'link':
@@ -24,9 +24,9 @@ client.on('message', message => {
             message.channel.send('http://www.nhentai.com/g/' + i);
           break;
           //!odds
-          case 'odds':
+          case 'odds': case 'Odds':
             var i = Math.floor(Math.random() * 101);
-            message.channel.send('Odds are' + i + "%");
+            message.channel.send('Odds are ' + i + "%");
           break;
          }
      }
