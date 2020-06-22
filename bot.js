@@ -63,6 +63,6 @@ function copypasta() {
 
     var arr = data.toString().split('\n');
     var i = Math.floor(Math.random() * arr.length);
-    return arr[i]);
+    return arr[i];
   })
 }
