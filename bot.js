@@ -38,6 +38,7 @@ client.on('message', message => {
             var arr = data.toString().split('\n');
             var i = Math.floor(Math.random() * arr.length);
             message.channel.send(arr[i]);
+          });
           break;
          }
      }
