@@ -36,10 +36,10 @@ client.on('message', message => {
        return;
      }
 
-     if (message.content.includes('vibe check')) {
-       message.channel.send('You have failed the vibe check');
-       return;
-     }
+     // if (message.content.includes('vibe check')) {
+     //   message.channel.send('You have failed the vibe check');
+     //   return;
+     // }
 
      if (message.content.includes('odds')) {
        var i = Math.floor(Math.random() * 101);
