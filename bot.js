@@ -12,22 +12,31 @@ client.on('message', message => {
         switch(cmd) {
           // !help
     	    case 'help':
-            message.channel.send('UwU what can do for you, senpai? I can do anything you want :P');
+            const hp = require('fs')
+            hp.readFile('files/help.txt', (err, data) => {
+              if (err) throw err;
+            //console.log(data.toString());
+            message.channel.send(data.toString());
+            });
           break;
-    	    // !link
-          case 'link':
+
+    	    // !saucelink
+          case 'saucelink':
             message.channel.send('http://www.nhentai.com/g/' + args);
           break;
-    	    // !random
-    	    case 'randomsauce':
+
+    	    // !saucerandom
+    	    case 'saucerandom':
             var i = Math.floor(Math.random() * 1000000);
             message.channel.send('http://www.nhentai.com/g/' + i);
           break;
+
           //!odds
           case 'odds': case 'Odds':
             var i = Math.floor(Math.random() * 101);
             message.channel.send('Odds are ' + i + "%");
           break;
+
           //!penissize
           case 'penissize': case 'dicksize':
             var i = Math.floor(Math.random() * 61);
@@ -37,6 +46,7 @@ client.on('message', message => {
               }
             message.channel.send(i + "um");
           break;
+
           // !copypasta
           case 'copypasta':
             const fs = require('fs')
@@ -49,6 +59,7 @@ client.on('message', message => {
             message.channel.send(arr[i]);
           });
           break;
+
           // !fetish
           case 'fetish':
             const fs1 = require('fs')
