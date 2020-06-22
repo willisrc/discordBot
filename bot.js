@@ -34,7 +34,7 @@ client.on('message', message => {
               if (err) throw err;
               console.log(data.toString());
             })
-            var arr = fs.split('\n');
+            var arr = fs.toString().split('\n');
             var i = Math.floor(Math.random() * arr.length);
             message.channel.send(arr[i]);
           break;
