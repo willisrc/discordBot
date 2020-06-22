@@ -30,7 +30,14 @@ client.on('message', message => {
           break;
           // !copypasta
           case 'copypasta':
-            message.channel.send(copypasta());
+          const fs = require('fs')
+          fs.readFile('files/copypastas.txt', (err, data) => {
+            if (err) throw err;
+            //console.log(data.toString());
+
+            var arr = data.toString().split('\n');
+            var i = Math.floor(Math.random() * arr.length);
+            message.channel.send(arr[i]);
           break;
          }
      }
