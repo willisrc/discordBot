@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', message => {
-    console.log(message);
+    //console.log(message);
     // Command Messages - Starting with `!`
     if (message.content.substring(0, 1) == '!') {
         var args = message.content.substring(1).split(' ');
@@ -29,7 +29,12 @@ client.on('message', message => {
             message.channel.send('Odds are ' + i + "%");
           break;
           case 'copypasta':
-            var arr = readTextFile('/files/copypastas.txt').split('\n');
+            const fs = require('fs')
+            fs.readFile('/files/copypastas.txt', (err, data) => {
+              if (err) throw err;
+              console.log(data.toString());
+            })
+            var arr = fs.split('\n');
             var i = Math.floor(Math.random() * arr.length);
             message.channel.send(arr[i]);
           break;
@@ -56,20 +61,3 @@ client.on('message', message => {
 client.login(process.env.BOT_TOKEN);
 
 // FUNCTIONS
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
-            }
-        }
-    }
-    rawFile.send(null);
-}
