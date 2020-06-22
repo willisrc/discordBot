@@ -12,16 +12,21 @@ client.on('message', message => {
         switch(cmd) {
           // !help
     	    case 'help':
-            message.channel.send('UwU here is what I can do for you, senpai: \n\t!link ---> gimme those wacky 6 digits and I\'ll give you the sauce \n\t!random ---> Your risky click of the day');
+            message.channel.send('UwU what can do for you, senpai? This command is still under development');
           break;
     	    // !link
           case 'link':
             message.channel.send('http://www.nhentai.com/g/' + args);
           break;
     	    // !random
-    	    case 'random':
+    	    case 'randomsauce':
             var i = Math.floor(Math.random() * 1000000);
             message.channel.send('http://www.nhentai.com/g/' + i);
+          break;
+          //!odds
+          case 'odds':
+            var i = Math.floor(Math.random() * 101);
+            message.channel.send('Odds are' + i + "%");
           break;
          }
      }
@@ -36,14 +41,8 @@ client.on('message', message => {
        return;
      }
 
-     // if (message.content.includes('vibe check')) {
-     //   message.channel.send('You have failed the vibe check');
-     //   return;
-     // }
-
-     if (message.content.includes('odds')) {
-       var i = Math.floor(Math.random() * 101);
-       message.channel.send('Odds are ' + i + '%');
+     if (message.content.includes('vibe check')) {
+       message.channel.send('You have failed the Vibe check');
        return;
      }
 
