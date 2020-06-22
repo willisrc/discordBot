@@ -51,8 +51,8 @@ client.on('message', message => {
           break;
           // !fetish
           case 'fetish':
-            //const fs = require('fs')
-            fs.readFile('files/fetish.txt', (err, data) => {
+            const fs1 = require('fs')
+            fs1.readFile('files/fetish.txt', (err, data) => {
               if (err) throw err;
             //console.log(data.toString());
 
