@@ -28,10 +28,31 @@ client.on('message', message => {
             var i = Math.floor(Math.random() * 101);
             message.channel.send('Odds are ' + i + "%");
           break;
+          //!penissize
+          case 'penissize': case 'dicksize':
+            var i = Math.floor(Math.random() * 61);
+              if (i == 60) {
+                message.channel.send('BIG DONG');
+                return;
+              }
+            message.channel.send(i + "um");
+          break;
           // !copypasta
           case 'copypasta':
             const fs = require('fs')
             fs.readFile('files/copypastas.txt', (err, data) => {
+              if (err) throw err;
+            //console.log(data.toString());
+
+            var arr = data.toString().split('\n');
+            var i = Math.floor(Math.random() * arr.length);
+            message.channel.send(arr[i]);
+          });
+          break;
+          // !fetish
+          case 'fetish':
+            const fs = require('fs')
+            fs.readFile('files/fetish.txt', (err, data) => {
               if (err) throw err;
             //console.log(data.toString());
 
@@ -45,6 +66,11 @@ client.on('message', message => {
      // Random Response Messages
      if (message.content.includes('anime')) {
        message.channel.send('Anime is a sin');
+       return;
+     }
+
+     if (message.content.includes('bleach')) {
+       message.channel.send('an engineer\'s favorite drink!');
        return;
      }
 
@@ -63,14 +89,3 @@ client.on('message', message => {
 client.login(process.env.BOT_TOKEN);
 
 // FUNCTIONS
-function copypasta() {
-  const fs = require('fs')
-  fs.readFile('files/copypastas.txt', (err, data) => {
-    if (err) throw err;
-    //console.log(data.toString());
-
-    var arr = data.toString().split('\n');
-    var i = Math.floor(Math.random() * arr.length);
-    return arr[i];
-  })
-}
