@@ -26,7 +26,7 @@ client.on('message', message => {
          }
      }
      // Response Messages
-     if (message.content.contains('anime')) {
+     if (message.content.includes('anime')) {
        message.channel.send('Anime is a sin');
      }
 });
