@@ -100,11 +100,6 @@ client.on('message', message => {
        return;
      }
 
-     if (message.content.includes('simp')) {
-       message.channel.send('@channel SIMP ALERT! SIMP ALERT!');
-       return;
-     }
-
 });
 
 client.login(process.env.BOT_TOKEN);
