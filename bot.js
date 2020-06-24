@@ -95,6 +95,11 @@ client.on('message', message => {
        return;
      }
 
+     if (message.content.includes('fitness')) {
+       message.channel.send('You can go ahead and fitten\' this dick in your mouth');
+       return;
+     }
+
 });
 
 client.login(process.env.BOT_TOKEN);
