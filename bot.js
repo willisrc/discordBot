@@ -20,6 +20,10 @@ client.on('message', message => {
             });
           break;
 
+          case 'setstatus':
+            client.user.setActivity(args); 
+          break;
+
     	    // !saucelink
           // case 'saucelink':
           //   message.channel.send('http://www.nhentai.com/g/' + args);
@@ -96,7 +100,7 @@ client.on('message', message => {
      }
 
      if (message.content.includes('fitness')) {
-       message.channel.send('You can go ahead and fitten\' this dick in your mouth');
+       message.channel.send('You can go ahead and fittin\' this dick in your mouth');
        return;
      }
 

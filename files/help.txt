@@ -8,6 +8,7 @@ Konichiwa Senpai! Slack-chan is here to fullfill all of your needs! This bot was
 !fetish - Wanna know you're fetish? I sure as hell don't. But I'll tell ya
 !copypasta - random copypasta 
 !saucerandom - Your risky click of the day
+!statusset - sets my status
 
 --- Reactions ---
 In addition to commands, there are some key words that will set me off
