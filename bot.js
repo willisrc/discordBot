@@ -21,7 +21,8 @@ client.on('message', message => {
           break;
 
           case 'setstatus':
-            client.user.setStatus(args.toString()); 
+            client.user.setActivity(args.toString()); 
+            message.channel.send("Anything for you, senpai");
           break;
 
     	    // !saucelink
