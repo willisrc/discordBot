@@ -110,7 +110,7 @@ client.login(process.env.BOT_TOKEN);
 
 // FUNCTIONS
 function statusSet(message, args) {
-  client.user.setPresence(args.toString(), {type: 'WATCHING'});
+  client.user.setActivity(args.toString(), {type: 'WATCHING'});
   message.channel.send('Anything for you, senpai');
   return;
 }
