@@ -21,7 +21,7 @@ client.on('message', message => {
           break;
 
           case 'setstatus':
-            client.user.setActivity(args); 
+            client.user.setStatus(args); 
           break;
 
     	    // !saucelink
