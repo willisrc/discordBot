@@ -112,7 +112,7 @@ client.on('message', message => {
             .setTimestamp()
             .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
 
-            channel.send(exampleEmbed);
+            message.channel.send(exampleEmbed);
           break;
          }
      }
@@ -148,7 +148,7 @@ client.on('message', message => {
      }
 
      if (message.content.includes('stocks') || message.content.includes('stonks')) {
-       message.channel.send('STONKS', {file: 'images/ahegao_stonks.jpg'});
+       message.channel.send('STONKS', {file: './images/ahegao_stonks.jpg'});
        // message.channel.send('STONKS', {file: ['images/ahegao_stonks.jpg']});
        return;
      }
