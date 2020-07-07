@@ -104,10 +104,18 @@ client.on('message', message => {
               '\n (Slack-chan is currently in beta)')
             .setThumbnail('attachment://slack.png')
             .addFields(
-              { name: 'Regular field title', value: 'Some value here' },
-              { name: '\u200B', value: '\u200B' },
-              { name: 'Inline field title', value: 'Some value here', inline: true },
-              { name: 'Inline field title', value: 'Some value here', inline: true },
+              { name: 'Commands', value: '!help - its the command you just typed, dumbass' +
+              '\n!odds/!Odds - I\'ll tell you the odds' +
+              '\n!penissize/!dicksize - Find out what you\'re penis size is. I can tell you right now it\'s small' +
+              '\n!fetish - Wanna know you\'re fetish? I sure as hell don\'t. But I\'ll tell ya' +
+              '\n!copypasta - random copypasta' +
+              '\n!saucerandom - Your risky click of the day' +
+              '\n!statusset - sets my status' +
+              '\n!food - where you can get da gud eats'
+              },
+              // { name: '\u200B', value: '\u200B' },
+              // { name: 'Inline field title', value: 'Some value here', inline: true },
+              // { name: 'Inline field title', value: 'Some value here', inline: true },
             )
             .addField('Inline field title', 'Some value here', true)
             .setImage('attachment://godisdead.jpg')
