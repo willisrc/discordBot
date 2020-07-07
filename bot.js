@@ -102,7 +102,7 @@ client.on('message', message => {
             .setAuthor('Slack-chan', 'attachment://godisdead.jpg', 'https://en.wikipedia.org/wiki/Ahegao')
             .setDescription('Slack-chan is here to fullfill all of your needs! This bot was made with the purpose of having a Slackbot equivalent in Discord! All of your favorite commands have been moved to here! Here is what I can currently do: ' +
               '\n (Slack-chan is currently in beta)')
-            .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+            .setThumbnail('attachment://godisdead.jpg')
             .addFields(
               { name: 'Regular field title', value: 'Some value here' },
               { name: '\u200B', value: '\u200B' },
@@ -110,9 +110,9 @@ client.on('message', message => {
               { name: 'Inline field title', value: 'Some value here', inline: true },
             )
             .addField('Inline field title', 'Some value here', true)
-            .setImage('https://i.imgur.com/wSTFkRM.png')
+            .setImage('attachment://godisdead.jpg')
             .setTimestamp()
-            .setFooter('Bow before me, peasants', 'https://i.imgur.com/wSTFkRM.png');
+            .setFooter('Bow before me, peasants', 'attachment://godisdead.jpg');
 
             message.channel.send(exampleEmbed);
           break;
