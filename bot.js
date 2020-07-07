@@ -110,7 +110,7 @@ client.on('message', message => {
             .addField('Inline field title', 'Some value here', true)
             .setImage('https://i.imgur.com/wSTFkRM.png')
             .setTimestamp()
-            .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+            .setFooter('Bow before me, peasants', 'https://i.imgur.com/wSTFkRM.png');
 
             message.channel.send(exampleEmbed);
           break;
@@ -148,7 +148,7 @@ client.on('message', message => {
      }
 
      if (message.content.includes('stocks') || message.content.includes('stonks')) {
-       message.channel.send('STONKS', {file: './images/ahegao_stonks.jpg'});
+       message.channel.send({files: ['./images/ahegao_stonks.jpg']});
        // message.channel.send('STONKS', {file: ['images/ahegao_stonks.jpg']});
        return;
      }
