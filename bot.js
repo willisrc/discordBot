@@ -89,6 +89,31 @@ client.on('message', message => {
             message.channel.send(arr[i]);
           });
           break;
+
+          //!embed
+          case 'embed':
+          // inside a command, event listener, etc.
+            const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle('Sup pussies')
+            .setURL('https://discord.js.org/')
+            .setAuthor('Slack-chan', 'images/ahegao_stonks.jpg', 'https://discord.js.org')
+            .setDescription('Konichiwa Senpai! Slack-chan is here to fullfill all of your needs! This bot was made with the purpose of having a Slackbot equivalent in Discord! All of your favorite commands have been moved to here! Here is what I can currently do: ' +
+              '\n (Slack-chan is currently in beta)')
+            .setThumbnail('images/ahegao_stonks.jpg')
+            .addFields(
+              { name: 'Regular field title', value: 'Some value here' },
+              { name: '\u200B', value: '\u200B' },
+              { name: 'Inline field title', value: 'Some value here', inline: true },
+              { name: 'Inline field title', value: 'Some value here', inline: true },
+            )
+            .addField('Inline field title', 'Some value here', true)
+            .setImage('https://i.imgur.com/wSTFkRM.png')
+            .setTimestamp()
+            .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+            channel.send(exampleEmbed);
+          break;
          }
      }
      // Random Response Messages
@@ -123,10 +148,7 @@ client.on('message', message => {
      }
 
      if (message.content.includes('stocks') || message.content.includes('stonks')) {
-       client.uploadFile({
-            to: message.channel.id,
-            file: 'images/ahegao_stonks.jpg'
-        });
+       message.channel.send('STONKS', {file: 'images/ahegao_stonks.jpg'});
        // message.channel.send('STONKS', {file: ['images/ahegao_stonks.jpg']});
        return;
      }
