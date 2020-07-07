@@ -123,7 +123,7 @@ client.on('message', message => {
      }
 
      if (message.content.includes('stocks') || message.content.includes('stonks')) {
-       message.channel.send('', {file: ['images/ahegao_stonks.jpg']});
+       message.channel.send('STONKS', {file: ['images/ahegao_stonks.jpg']});
        return;
      }
 
