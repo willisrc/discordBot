@@ -104,7 +104,7 @@ client.on('message', message => {
               '\n (Slack-chan is currently in beta)')
             .setThumbnail('attachment://slack.png')
             .addFields(
-              { name: 'Commands', value: '!help - its the command you just typed, dumbass' +
+              { name: 'Commands', value: '!help - it\'s the command you just typed, dumbass' +
               '\n!odds/!Odds - I\'ll tell you the odds' +
               '\n!penissize/!dicksize - Find out what you\'re penis size is. I can tell you right now it\'s small' +
               '\n!fetish - Wanna know you\'re fetish? I sure as hell don\'t. But I\'ll tell ya' +
