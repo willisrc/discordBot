@@ -117,8 +117,8 @@ client.on('message', message => {
        return;
      }
 
-     if (message.content.includes('slack-chan'.ignoreCase)) {
-       message.channel.send('Eat shit you pleb. You think you can just casually say my name? Speak when you\'re spoken to filth.');
+     if (message.content.includes('slack-chan')) {
+       message.channel.send('Yeah, keep talking about me like I\'m not here... jackass');
        return;
      }
 
