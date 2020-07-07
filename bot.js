@@ -94,15 +94,15 @@ client.on('message', message => {
           case 'embed':
           // inside a command, event listener, etc.
             const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('#5700a3')
+            .setColor('#0099ff')
             .setTitle('Konichiwa Senpais!')
             .setURL('https://nhentai.com/')
-            .attachFiles(['./images/godisdead.jpg'])
+            .attachFiles(['./images/godisdead.jpg', './images/slack.png'])
 	          //.setImage('attachment://godisdead.jpg');
             .setAuthor('Slack-chan', 'attachment://godisdead.jpg', 'https://en.wikipedia.org/wiki/Ahegao')
             .setDescription('Slack-chan is here to fullfill all of your needs! This bot was made with the purpose of having a Slackbot equivalent in Discord! All of your favorite commands have been moved to here! Here is what I can currently do: ' +
               '\n (Slack-chan is currently in beta)')
-            .setThumbnail('attachment://godisdead.jpg')
+            .setThumbnail('attachment://slack.png')
             .addFields(
               { name: 'Regular field title', value: 'Some value here' },
               { name: '\u200B', value: '\u200B' },
