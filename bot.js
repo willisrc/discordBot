@@ -97,7 +97,9 @@ client.on('message', message => {
             .setColor('#5700a3')
             .setTitle('Konichiwa Senpais!')
             .setURL('https://nhentai.com/')
-            .setAuthor('Slack-chan', 'https://i.imgur.com/wSTFkRM.png', 'https://en.wikipedia.org/wiki/Ahegao')
+            .attachFiles(['./images/godisdead.jpg'])
+	          //.setImage('attachment://godisdead.jpg');
+            .setAuthor('Slack-chan', 'attachment://godisdead.jpg', 'https://en.wikipedia.org/wiki/Ahegao')
             .setDescription('Slack-chan is here to fullfill all of your needs! This bot was made with the purpose of having a Slackbot equivalent in Discord! All of your favorite commands have been moved to here! Here is what I can currently do: ' +
               '\n (Slack-chan is currently in beta)')
             .setThumbnail('https://i.imgur.com/wSTFkRM.png')
