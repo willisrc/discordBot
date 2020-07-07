@@ -11,14 +11,14 @@ client.on('message', message => {
 
         switch(cmd) {
           // !help
-    	    case 'help':
-            const hp = require('fs')
-            hp.readFile('files/help.txt', (err, data) => {
-              if (err) throw err;
-            //console.log(data.toString());
-            message.channel.send(data.toString());
-            });
-          break;
+    	    // case 'help':
+          //   const hp = require('fs')
+          //   hp.readFile('files/help.txt', (err, data) => {
+          //     if (err) throw err;
+          //   //console.log(data.toString());
+          //   message.channel.send(data.toString());
+          //   });
+          // break;
 
           case 'setstatus':
             statusSet(message, args);
@@ -90,8 +90,8 @@ client.on('message', message => {
           });
           break;
 
-          //!embed
-          case 'embed':
+          //!help
+          case 'help':
           // inside a command, event listener, etc.
             const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#0099ff')
@@ -117,7 +117,7 @@ client.on('message', message => {
               // { name: 'Inline field title', value: 'Some value here', inline: true },
               // { name: 'Inline field title', value: 'Some value here', inline: true },
             )
-            .addField('Inline field title', 'Some value here', true)
+            .addField('Reactions', 'In addition to commands, there are some key words that will set me off', true)
             .setImage('attachment://godisdead.jpg')
             .setTimestamp()
             .setFooter('Bow before me, peasants', 'attachment://godisdead.jpg');
