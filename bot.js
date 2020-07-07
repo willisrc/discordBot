@@ -117,6 +117,11 @@ client.on('message', message => {
        return;
      }
 
+     if (message.content.includes('slack-chan'.ignoreCase)) {
+       message.channel.send('Eat shit you pleb. You think you can just casually say my name? Speak when you\'re spoken to filth.');
+       return;
+     }
+
 });
 
 client.login(process.env.BOT_TOKEN);
