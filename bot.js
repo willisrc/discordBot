@@ -118,7 +118,7 @@ client.on('message', message => {
               // { name: 'Inline field title', value: 'Some value here', inline: true },
             )
             .addField('Reactions', 'In addition to commands, there are some key words that will set me off', true)
-            .setImage('attachment://godisdead.jpg')
+            .setImage('https://giphy.com/gifs/jleNxE9BsJVO8')
             .setTimestamp()
             .setFooter('Bow before me, peasants', 'attachment://godisdead.jpg');
 
