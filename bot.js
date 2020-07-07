@@ -64,6 +64,19 @@ client.on('message', message => {
           });
           break;
 
+          // !food
+          case 'food':
+            const f = require('f')
+            f.readFile('files/food.txt', (err, data) => {
+              if (err) throw err;
+            //console.log(data.toString());
+
+            var arr = data.toString().split('\n');
+            var i = Math.floor(Math.random() * arr.length);
+            message.channel.send(arr[i]);
+          });
+          break;
+
           // !fetish
           case 'fetish':
             const fs1 = require('fs')

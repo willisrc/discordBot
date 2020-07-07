@@ -9,6 +9,7 @@ Konichiwa Senpai! Slack-chan is here to fullfill all of your needs! This bot was
 !copypasta - random copypasta 
 !saucerandom - Your risky click of the day
 !statusset - sets my status
+!food - where you can get da gud eats
 
 --- Reactions ---
 In addition to commands, there are some key words that will set me off
