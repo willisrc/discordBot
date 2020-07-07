@@ -66,7 +66,7 @@ client.on('message', message => {
 
           // !food
           case 'food':
-            const f = require('f')
+            const f = require('fs')
             f.readFile('files/food.txt', (err, data) => {
               if (err) throw err;
             //console.log(data.toString());
