@@ -122,6 +122,11 @@ client.on('message', message => {
        return;
      }
 
+     if (message.content.includes('stocks')) || (message.content.includes('stonks')) {
+       message.channel.send('STONKS' {file: ['images/ahegao_stonks.jpg']});
+       return;
+     }
+
 });
 
 client.login(process.env.BOT_TOKEN);
