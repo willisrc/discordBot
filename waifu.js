@@ -6,10 +6,15 @@ class Waifu {
 
   getStats() {
     return `
-      Author: ${this.author}
-      Args: ${this.args}
+      Author: ${this.author} \nArgs: ${this.args}
     `;
   }
+
+  checkExisting() {
+
+  }
+
+
 }
 
 module.exports = Waifu;
