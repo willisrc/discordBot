@@ -1,9 +1,3 @@
-const waifudrop = (message, args) => {
-  return 'hi';
-}
-
-exports.waifudrop = waifudrop;
-
 class Waifu {
   constructor(message, args) {
     this.author = message.author;
@@ -17,3 +11,5 @@ class Waifu {
     `;
   }
 }
+
+module.exports = Waifu;
