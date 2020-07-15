@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+const Waifu = require('./waifu.js');
+
 client.on('message', message => {
     //console.log(message);
     // Command Messages - Starting with `!`
@@ -33,6 +35,11 @@ client.on('message', message => {
     	    case 'saucerandom':
             var i = Math.floor(Math.random() * 1000000);
             message.channel.send('http://www.nhentai.com/g/' + i);
+          break;
+
+          // !waifu
+    	    case 'waifu':
+            Waifu.drop(message, args);
           break;
 
           //!odds
@@ -173,3 +180,9 @@ function statusSet(message, args) {
   message.channel.send('Anything for you, senpai');
   return;
 }
+
+// function waifudrop(message, args) {
+//   client.user.setActivity(args.toString(), {type: 'WATCHING'});
+//   message.channel.send('Anything for you, senpai');
+//   return;
+// }
