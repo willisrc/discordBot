@@ -38,7 +38,8 @@ client.on('message', message => {
           // !waifu
     	    case 'waifu':
             const waifu = require('./waifu');
-            message.channel.send(waifu);
+            const newWaifu = new Waifu(message, args);
+            message.channel.send(newWaifu.getStats());
           break;
 
           //!odds
