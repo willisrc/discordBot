@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const Waifu = require('./waifu.js');
-
 client.on('message', message => {
     //console.log(message);
     // Command Messages - Starting with `!`
@@ -39,7 +37,8 @@ client.on('message', message => {
 
           // !waifu
     	    case 'waifu':
-            Waifu.drop(message, args);
+            const waifu = require('./waifu');
+            message.channel.send(waifu);
           break;
 
           //!odds

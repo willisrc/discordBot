@@ -1,3 +1,5 @@
-function waifudrop(message, args) {
-  message.channel.send('Hi');
+const waifudrop = (message, args) => {
+  return 'hi';
 }
+
+exports.waifudrop = waifudrop;
