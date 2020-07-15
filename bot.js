@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const waifu = require('./waifu');
+const Waifu = require('./waifu');
 
 client.on('message', message => {
     //console.log(message);
@@ -39,7 +39,7 @@ client.on('message', message => {
 
           // !waifu
     	    case 'waifu':
-            const newWaifu = new waifu(message, args);
+            const newWaifu = new Waifu(message, args);
             message.channel.send(newWaifu.getStats());
           break;
 
