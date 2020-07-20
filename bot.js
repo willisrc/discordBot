@@ -48,12 +48,12 @@ client.on('message', message => {
           console.log(args.toString());
             switch(args.toString().trim()) {
               case 'd20':
-                var i = Math.floor(Math.random() * 21);
+                var i = Math.floor(Math.random() * 20) + 1;
                 message.channel.send(i);
               break;
 
               case 'd6':
-                var i = Math.floor(Math.random() * 7);
+                var i = Math.floor(Math.random() * 6) + 1;
                 message.channel.send(i);
               break;
 
