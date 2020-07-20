@@ -45,7 +45,7 @@ client.on('message', message => {
 
           //!roll
           case 'roll':
-          console.log(args);
+          console.log(args.toString());
             switch(args) {
               case 'd20':
                 var i = Math.floor(Math.random() * 21);
