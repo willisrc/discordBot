@@ -43,6 +43,25 @@ client.on('message', message => {
             message.channel.send(newWaifu.getStats());
           break;
 
+          //!roll
+          case 'roll':
+            switch(args[1]) {
+              case 'd20':
+                var i = Math.floor(Math.random() * 21);
+                message.channel.send(i);
+              break;
+
+              case 'd6':
+                var i = Math.floor(Math.random() * 7);
+                message.channel.send(i);
+              break;
+
+              default:
+                message.channel.send('Please specify what you\'d like to roll (d20, d6, etc)');
+              break;
+            }
+          break;
+
           //!odds
           case 'odds': case 'Odds':
             var i = Math.floor(Math.random() * 101);
@@ -119,7 +138,8 @@ client.on('message', message => {
               '\n!copypasta - random copypasta' +
               '\n!saucerandom - Your risky click of the day' +
               '\n!statusset - sets my status' +
-              '\n!food - where you can get da gud eats'
+              '\n!food - where you can get da gud eats' +
+              '\n!roll - roll the dice'
               },
               // { name: '\u200B', value: '\u200B' },
               // { name: 'Inline field title', value: 'Some value here', inline: true },
