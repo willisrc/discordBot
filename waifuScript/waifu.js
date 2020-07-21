@@ -1,11 +1,11 @@
 class Waifu {
-  var rString = '';
   //const users = require('./waifuUsers.json')
 
   // TODO: create/pull the json for everyones info
   constructor(message, args) {
     this.author = message.author;
     this.args = args.toString();
+    var rString = '';
   }
 
   main() {
