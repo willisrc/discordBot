@@ -1,6 +1,13 @@
 class Waifu {
   // var rString = null;
-  const users = require('./waifuUsers.json')
+  //const users = require('./waifuUsers.json')
+  const fs = require('fs')fs.readFile('./waifuUsers.json', 'utf8', (err, jsonString) => {
+    if (err) {
+        console.log("File read failed:", err)
+        return
+    }
+    console.log('File data:', jsonString)
+  })
   // TODO: create/pull the json for everyones info
   constructor(message, args) {
     this.author = message.author;
