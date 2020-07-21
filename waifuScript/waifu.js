@@ -31,7 +31,7 @@ class Waifu {
           return
       }
       console.log('File data:', users)
-      var a = users;
+      const a = users;
     })
     return a;
   }
