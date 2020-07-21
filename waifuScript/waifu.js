@@ -25,7 +25,7 @@ class Waifu {
     //   Author: ${this.author} \nArgs: ${this.args}
     // `;
     const fs = require('fs')
-    fs.readFile('./waifuUsers.json', 'utf8', (err, users) => {
+    fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, users) => {
       if (err) {
           console.log("File read failed:", err)
           return
