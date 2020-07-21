@@ -1,5 +1,5 @@
 class Waifu {
-  var rString = null;
+  //var rString = null;
   // TODO: create/pull the json for everyones info
   constructor(message, args) {
     this.author = message.author;

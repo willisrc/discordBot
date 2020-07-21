@@ -120,7 +120,7 @@ client.on('message', message => {
           //!help
           case 'help':
           // inside a command, event listener, etc.
-            const exampleEmbed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
             .setColor('#0099ff')
             .setTitle('Konichiwa Senpais!')
             .setURL('https://nhentai.com/')
@@ -150,7 +150,7 @@ client.on('message', message => {
             .setTimestamp()
             .setFooter('Bow before me, peasants', 'attachment://godisdead.jpg');
 
-            message.channel.send(exampleEmbed);
+            message.channel.send(embed);
           break;
          }
      }
