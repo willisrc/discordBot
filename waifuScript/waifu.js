@@ -5,15 +5,15 @@ class Waifu {
   constructor(message, args) {
     this.author = message.author;
     this.args = args.toString();
-    var rString = '';
+    this.rString = '';
   }
 
   main() {
     // Keep running as long as there is no determined output
     if(this.args == 'help'){
-      rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
+      this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
-    while(rString == '') {
+    while(this.rString == '') {
       if (!checkExisting()) {
         // TODO: add the user
       }
@@ -21,7 +21,7 @@ class Waifu {
         // TODO: add subcommands: roll,
       }
     }
-    return rString;
+    return this.rString;
   }
 
   getStats() {
