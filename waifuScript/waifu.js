@@ -1,5 +1,5 @@
 class Waifu {
-  var rString = null;
+  // var rString = null;
   const users = require('./waifuUsers.json')
   // TODO: create/pull the json for everyones info
   constructor(message, args) {
@@ -7,17 +7,17 @@ class Waifu {
     this.args = args.toString();
   }
 
-  main() {
-    // Keep running as long as there is no determined output
-    while(rString == null) {
-      if (!checkExisting()) {
-        // TODO: add the user
-      }
-      switch(args) {
-        // TODO: add subcommands: roll,
-      }
-    }
-  }
+  // main() {
+  //   // Keep running as long as there is no determined output
+  //   while(rString == null) {
+  //     if (!checkExisting()) {
+  //       // TODO: add the user
+  //     }
+  //     switch(args) {
+  //       // TODO: add subcommands: roll,
+  //     }
+  //   }
+  // }
 
   getStats() {
     // return `
