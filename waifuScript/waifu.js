@@ -25,15 +25,20 @@ class Waifu {
     //   Author: ${this.author} \nArgs: ${this.args}
     // `;
     const fs = require('fs')
-    fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, users) => {
+    fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, jsonString) => {
       if (err) {
           console.log("File read failed:", err)
           return
       }
-      console.log('File data:', users)
-      const a = users;
+      try {
+        const users = JSON.parse(jsonString)
+        console.log('File data:', users)
+      }
+      catch(err) {
+        console.log('Error parsing JSON string:', err)
+      }
     })
-    return a;
+    return users;
   }
 
   // if the user exists in the logs, return true
