@@ -1,5 +1,5 @@
 class Waifu {
-  // var rString = null;
+  var rString = '';
   //const users = require('./waifuUsers.json')
 
   // TODO: create/pull the json for everyones info
@@ -8,17 +8,20 @@ class Waifu {
     this.args = args.toString();
   }
 
-  // main() {
-  //   // Keep running as long as there is no determined output
-  //   while(rString == null) {
-  //     if (!checkExisting()) {
-  //       // TODO: add the user
-  //     }
-  //     switch(args) {
-  //       // TODO: add subcommands: roll,
-  //     }
-  //   }
-  // }
+  main() {
+    // Keep running as long as there is no determined output
+    if(args == 'help'){
+      rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
+    }
+    while(rString == '') {
+      if (!checkExisting()) {
+        // TODO: add the user
+      }
+      switch(args) {
+        // TODO: add subcommands: roll,
+      }
+    }
+  }
 
   getStats() {
     // return `
