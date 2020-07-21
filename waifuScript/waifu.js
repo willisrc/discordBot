@@ -10,14 +10,14 @@ class Waifu {
 
   main() {
     // Keep running as long as there is no determined output
-    if(args == 'help'){
+    if(this.args == 'help'){
       rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
     while(rString == '') {
       if (!checkExisting()) {
         // TODO: add the user
       }
-      switch(args) {
+      switch(this.args) {
         // TODO: add subcommands: roll,
       }
     }
