@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const Waifu = require('./waifu');
+const Waifu = require('./waifuScript/waifu');
 
 client.on('message', message => {
     //console.log(message);
@@ -45,7 +45,6 @@ client.on('message', message => {
 
           //!roll
           case 'roll':
-          console.log(args.toString());
             switch(args.toString().trim()) {
               case 'd20':
                 var i = Math.floor(Math.random() * 20) + 1;
