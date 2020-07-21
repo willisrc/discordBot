@@ -31,8 +31,9 @@ class Waifu {
           return
       }
       console.log('File data:', users)
-      return users;
+      var a = users;
     })
+    return a;
   }
 
   // if the user exists in the logs, return true
