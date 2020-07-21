@@ -21,6 +21,7 @@ class Waifu {
         // TODO: add subcommands: roll,
       }
     }
+    return rString;
   }
 
   getStats() {

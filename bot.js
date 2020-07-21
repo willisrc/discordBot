@@ -40,7 +40,7 @@ client.on('message', message => {
           // !waifu
     	    case 'waifu':
             const newWaifu = new Waifu(message, args);
-            message.channel.send(newWaifu.getStats());
+            message.channel.send(newWaifu.main());
           break;
 
           //!roll
