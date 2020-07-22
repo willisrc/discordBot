@@ -214,11 +214,11 @@ function readJson(path) {
     try {
       const users = JSON.parse(jsonString)
       console.log('File data:', users)
+      return users;
     }
     catch(err) {
       console.log('Error parsing JSON string:', err)
     }
-    return users;
   })
 }
 
