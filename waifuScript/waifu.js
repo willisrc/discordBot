@@ -46,7 +46,9 @@ class Waifu {
     while(this.rString == '') {
       if (!checkExisting()) {
         // TODO: add the user
+        this.rString = 'New user detected. You have been added to the database';
       }
+      console.log('User exists in the json');
       switch(this.args) {
         // TODO: add subcommands: roll,
       }
