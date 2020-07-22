@@ -26,7 +26,7 @@ class Waifu {
       this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
     while(this.rString == '') {
-      if (!this.users.contains(this.author.username)) {
+      if (!this.users.hasOwnProperty(this.author.username)) {
         // TODO: add the user
         this.rString = 'New user detected. You have been added to the database';
       }

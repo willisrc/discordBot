@@ -213,7 +213,7 @@ function readJson(path) {
     }
     try {
       const users = JSON.parse(jsonString)
-      console.log('File data:', users)
+      // console.log('File data:', users)
       return users;
     }
     catch(err) {
