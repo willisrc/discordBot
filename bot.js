@@ -203,7 +203,7 @@ function statusSet(message, args) {
   return;
 }
 
-fuction readJson(path) {
+function readJson(path) {
   const fs = require('fs')
   fs.readFile(path, 'utf8', (err, jsonString) => {
     if (err) {
