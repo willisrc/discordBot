@@ -26,15 +26,15 @@ class Waifu {
       this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
     while(this.rString == '') {
-      // if (!checkExisting()) {
-      //   // TODO: add the user
-      //   this.rString = 'New user detected. You have been added to the database';
-      // }
-      // console.log('User exists in the json');
-    //   switch(this.args) {
-    //     // TODO: add subcommands: roll,
-    //   }
-    this.rString = 'passed the test';
+      if (!this.users.contains(this.author.username)) {
+        // TODO: add the user
+        this.rString = 'New user detected. You have been added to the database';
+      }
+      this.rString = 'User exists in the json';
+      switch(this.args) {
+        // TODO: add subcommands: roll,
+      }
+    // this.rString = 'passed the test';
     }
     return this.rString;
   }

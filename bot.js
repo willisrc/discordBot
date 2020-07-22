@@ -221,9 +221,3 @@ function readJson(path) {
     }
   })
 }
-
-// function waifudrop(message, args) {
-//   client.user.setActivity(args.toString(), {type: 'WATCHING'});
-//   message.channel.send('Anything for you, senpai');
-//   return;
-// }
