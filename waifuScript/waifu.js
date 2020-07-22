@@ -8,34 +8,6 @@ class Waifu {
     this.rString = '';
   }
 
-  readJson() {
-    const fs = require('fs')
-    fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-          console.log("File read failed:", err)
-          return
-      }
-      try {
-        const users = JSON.parse(jsonString)
-        console.log('File data:', users)
-      }
-      catch(err) {
-        console.log('Error parsing JSON string:', err)
-      }
-    })
-      return users;
-  }
-
-  checkExisting() {
-    const users = readjson();
-    console.log('json successfully ported', users);
-    var temp = this.author.username;
-    if(users.contains(temp)) {
-      return true;
-    }
-    return false;
-  }
-
   main() {
     // Keep running as long as there is no determined output
     console.log(this.author.username);
@@ -54,6 +26,35 @@ class Waifu {
       }
     }
     return this.rString;
+
+    function checkExisting() {
+      const users = readjson();
+      console.log('json successfully ported', users);
+      var temp = this.author.username;
+      if(users.contains(temp)) {
+        return true;
+      }
+      return false;
+    }
+
+    function readJson() {
+      const fs = require('fs')
+      fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, jsonString) => {
+        if (err) {
+            console.log("File read failed:", err)
+            return
+        }
+        try {
+          const users = JSON.parse(jsonString)
+          console.log('File data:', users)
+        }
+        catch(err) {
+          console.log('Error parsing JSON string:', err)
+        }
+      })
+        return users;
+    }
+
   }
 }
 module.exports = Waifu;
