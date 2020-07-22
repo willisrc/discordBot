@@ -8,30 +8,33 @@ class Waifu {
     this.rString = '';
   }
 
-  const fs = require('fs')
-  function jsonReader(filePath, cb) {
-      fs.readFile(filePath, (err, fileData) => {
-          if (err) {
-              return cb && cb(err)
-          }
-          try {
-              const object = JSON.parse(fileData)
-              return cb && cb(null, object)
-          } catch(err) {
-              return cb && cb(err)
-          }
-      })
+  readJson() {
+    const fs = require('fs')
+    fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+          console.log("File read failed:", err)
+          return
+      }
+      try {
+        const users = JSON.parse(jsonString)
+        console.log('File data:', users)
+      }
+      catch(err) {
+        console.log('Error parsing JSON string:', err)
+      }
+    })
+      return users;
   }
 
   checkExisting() {
-    // TODO: read the json
-    jsonReader('./waifuUsers.json', (err, user) => {
-      if (err) {
-          console.log(err)
-          return
-      }
-    console.log(user)
-    })
+    const users = readjson();
+    console.log('json successfully ported', users);
+    var temp = this.author.username;
+    if(users.contains(temp)) {
+      return true;
+    }
+    return false;
+
   }
 
   main() {
@@ -50,31 +53,5 @@ class Waifu {
     }
     return this.rString;
   }
-
-  // getStats() {
-  //   // return `
-  //   //   Author: ${this.author} \nArgs: ${this.args}
-  //   // `;
-  //   const fs = require('fs')
-  //   fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, jsonString) => {
-  //     if (err) {
-  //         console.log("File read failed:", err)
-  //         return
-  //     }
-  //     try {
-  //       const users = JSON.parse(jsonString)
-  //       console.log('File data:', users)
-  //     }
-  //     catch(err) {
-  //       console.log('Error parsing JSON string:', err)
-  //     }
-  //   })
-  //   return users;
-  // }
-
-  // if the user exists in the logs, return true
-
-
-
 }
 module.exports = Waifu;
