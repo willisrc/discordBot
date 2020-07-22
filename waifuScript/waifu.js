@@ -8,6 +8,32 @@ class Waifu {
     this.rString = '';
   }
 
+  const fs = require('fs')
+  function jsonReader(filePath, cb) {
+      fs.readFile(filePath, (err, fileData) => {
+          if (err) {
+              return cb && cb(err)
+          }
+          try {
+              const object = JSON.parse(fileData)
+              return cb && cb(null, object)
+          } catch(err) {
+              return cb && cb(err)
+          }
+      })
+  }
+
+  checkExisting() {
+    // TODO: read the json
+    jsonReader('./waifuUsers.json', (err, user) => {
+      if (err) {
+          console.log(err)
+          return
+      }
+    console.log(user)
+    })
+  }
+
   main() {
     // Keep running as long as there is no determined output
     console.log(this.author.username);
@@ -47,34 +73,8 @@ class Waifu {
   // }
 
   // if the user exists in the logs, return true
-  checkExisting() {
-    // TODO: read the json
-    jsonReader('./waifuUsers.json', (err, user) => {
-      if (err) {
-          console.log(err)
-          return
-      }
-    console.log(user)
-    })
-  }
+
 
 
 }
-
-const fs = require('fs')
-function jsonReader(filePath, cb) {
-    fs.readFile(filePath, (err, fileData) => {
-        if (err) {
-            return cb && cb(err)
-        }
-        try {
-            const object = JSON.parse(fileData)
-            return cb && cb(null, object)
-        } catch(err) {
-            return cb && cb(err)
-        }
-    })
-}
-
-
 module.exports = Waifu;
