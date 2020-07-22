@@ -10,6 +10,7 @@ class Waifu {
 
   main() {
     // Keep running as long as there is no determined output
+    console.log(this.author);
     if(this.args == 'help'){
       this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
