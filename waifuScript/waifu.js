@@ -34,7 +34,6 @@ class Waifu {
       return true;
     }
     return false;
-
   }
 
   main() {
@@ -44,6 +43,7 @@ class Waifu {
       this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
     while(this.rString == '') {
+      const users = readjson();
       if (!checkExisting()) {
         // TODO: add the user
         this.rString = 'New user detected. You have been added to the database';
