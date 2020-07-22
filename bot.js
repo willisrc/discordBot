@@ -40,6 +40,7 @@ client.on('message', message => {
           // !waifu
     	    case 'waifu':
             const newWaifu = new Waifu(message, args);
+            const users = readJson('./waifuScript/waifuUsers.json');
             message.channel.send(newWaifu.main());
           break;
 
@@ -200,6 +201,24 @@ function statusSet(message, args) {
   client.user.setActivity(args.toString(), {type: 'WATCHING'});
   message.channel.send('Anything for you, senpai');
   return;
+}
+
+fuction readJson(path) {
+  const fs = require('fs')
+  fs.readFile(path, 'utf8', (err, jsonString) => {
+    if (err) {
+        console.log("File read failed:", err)
+        return
+    }
+    try {
+      const users = JSON.parse(jsonString)
+      console.log('File data:', users)
+    }
+    catch(err) {
+      console.log('Error parsing JSON string:', err)
+    }
+  })
+    return users;
 }
 
 // function waifudrop(message, args) {

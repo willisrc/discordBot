@@ -2,39 +2,22 @@ class Waifu {
   //const users = require('./waifuUsers.json')
 
   // TODO: create/pull the json for everyones info
-  constructor(message, args) {
+  constructor(message, args, users) {
     this.author = message.author;
     this.args = args.toString();
     this.rString = '';
+    this.users = users;
   }
 
-  readJson() {
-    const fs = require('fs')
-    fs.readFile('./waifuScript/waifuUsers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-          console.log("File read failed:", err)
-          return
-      }
-      try {
-        const users = JSON.parse(jsonString)
-        console.log('File data:', users)
-      }
-      catch(err) {
-        console.log('Error parsing JSON string:', err)
-      }
-    })
-      return users;
-  }
-
-  checkExisting() {
-    const users = readjson();
-    console.log('json successfully ported', users);
-    var temp = this.author.username;
-    if(users.contains(temp)) {
-      return true;
-    }
-    return false;
-  }
+  // checkExisting() {
+  //   const users = readjson();
+  //   console.log('json successfully ported', users);
+  //   var temp = this.author.username;
+  //   if(users.contains(temp)) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   main() {
     // Keep running as long as there is no determined output
@@ -43,15 +26,15 @@ class Waifu {
       this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
     while(this.rString == '') {
-      const users = readjson();
-      if (!checkExisting()) {
-        // TODO: add the user
-        this.rString = 'New user detected. You have been added to the database';
-      }
-      console.log('User exists in the json');
-      switch(this.args) {
-        // TODO: add subcommands: roll,
-      }
+      // if (!checkExisting()) {
+      //   // TODO: add the user
+      //   this.rString = 'New user detected. You have been added to the database';
+      // }
+      // console.log('User exists in the json');
+    //   switch(this.args) {
+    //     // TODO: add subcommands: roll,
+    //   }
+    this.rString = 'passed the test';
     }
     return this.rString;
   }
