@@ -218,8 +218,8 @@ function readJson(path) {
     catch(err) {
       console.log('Error parsing JSON string:', err)
     }
-  })
     return users;
+  })
 }
 
 // function waifudrop(message, args) {
