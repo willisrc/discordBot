@@ -94,11 +94,8 @@ client.on('message', message => {
 
           // !copypasta
           case 'copypasta':
-            //const fs = require('fs')
             fs.readFile('files/copypastas.txt', (err, data) => {
               if (err) throw err;
-            //console.log(data.toString());
-
             var arr = data.toString().split('\n');
             var i = Math.floor(Math.random() * arr.length);
             message.channel.send(arr[i]);
@@ -107,11 +104,8 @@ client.on('message', message => {
 
           // !food
           case 'food':
-            //const f = require('fs')
             fs.readFile('files/food.txt', (err, data) => {
               if (err) throw err;
-            //console.log(data.toString());
-
             var arr = data.toString().split('\n');
             var i = Math.floor(Math.random() * arr.length);
             message.channel.send(arr[i]);
@@ -120,11 +114,8 @@ client.on('message', message => {
 
           // !fetish
           case 'fetish':
-            //const fs1 = require('fs')
             fs.readFile('files/fetish.txt', (err, data) => {
               if (err) throw err;
-            //console.log(data.toString());
-
             var arr = data.toString().split('\n');
             var i = Math.floor(Math.random() * arr.length);
             message.channel.send(arr[i]);
