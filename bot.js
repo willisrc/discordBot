@@ -39,7 +39,7 @@ client.on('message', message => {
 
           // !waifu
     	    case 'waifu':
-            var = readJson('./waifuScript/waifuUsers.json');
+            var users = readJson('./waifuScript/waifuUsers.json');
             const newWaifu = new Waifu(message, args, users);
             message.channel.send(newWaifu.main());
           break;
