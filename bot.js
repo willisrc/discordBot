@@ -25,6 +25,7 @@ client.on('message', message => {
         var args = message.content.substring(1).split(' ');
         var cmd = args[0];
         args = args.splice(1);
+        const fs = require('fs')
 
         switch(cmd) {
           case 'setstatus':
@@ -93,7 +94,7 @@ client.on('message', message => {
 
           // !copypasta
           case 'copypasta':
-            const fs = require('fs')
+            //const fs = require('fs')
             fs.readFile('files/copypastas.txt', (err, data) => {
               if (err) throw err;
             //console.log(data.toString());
@@ -106,8 +107,8 @@ client.on('message', message => {
 
           // !food
           case 'food':
-            const f = require('fs')
-            f.readFile('files/food.txt', (err, data) => {
+            //const f = require('fs')
+            fs.readFile('files/food.txt', (err, data) => {
               if (err) throw err;
             //console.log(data.toString());
 
@@ -119,8 +120,8 @@ client.on('message', message => {
 
           // !fetish
           case 'fetish':
-            const fs1 = require('fs')
-            fs1.readFile('files/fetish.txt', (err, data) => {
+            //const fs1 = require('fs')
+            fs.readFile('files/fetish.txt', (err, data) => {
               if (err) throw err;
             //console.log(data.toString());
 
