@@ -41,6 +41,7 @@ client.on('message', message => {
     	    case 'waifu':
             var users = readJson('./waifuScript/waifuUsers.json');
             const newWaifu = new Waifu(message, args, users);
+            console.log('made it this far', users);
             message.channel.send(newWaifu.main());
           break;
 
