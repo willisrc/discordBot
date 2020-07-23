@@ -29,7 +29,7 @@ class Waifu {
     }
     while(this.rString == '') {
       console.log(this.author.username);
-      if (this.author.username in this.users) {
+      if (this.users[this.author.username]) {
         // TODO: add the user
         this.rString = 'User exists in the json';
       }
