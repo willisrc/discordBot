@@ -19,6 +19,7 @@ class Waifu {
   //   return false;
   // }
 
+
   main() {
     // Keep running as long as there is no determined output
     console.log(this.author.username);
