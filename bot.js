@@ -71,7 +71,7 @@ client.on('message', message => {
               break;
 
               default:
-                message.channel.send('Please specify what you\'d like to roll (d20, d6, etc)');
+                message.channel.send('Please specify what you\'d like to roll \nDice currently available: d20, d6');
               break;
             }
           break;
