@@ -39,7 +39,14 @@ client.on('message', message => {
 
           // !waifu
     	    case 'waifu':
-            var users = readJson('./waifuScript/waifuUsers.json');
+            //var users = jsonReader('./waifuScript/waifuUsers.json');
+            jsonReader('./waifuScript/waifuUsers.json', (err, users) => {
+                if (err) {
+                    console.log(err)
+                    return
+                }
+                console.log(users)
+            })
             const newWaifu = new Waifu(message, args, users);
             console.log('made it this far', users);
             message.channel.send(newWaifu.main());
@@ -204,21 +211,36 @@ function statusSet(message, args) {
   return;
 }
 
-//Reads in a json file
-function readJson(path) {
-  const fs = require('fs')
-  fs.readFile(path, 'utf8', (err, jsonString) => {
-    if (err) {
-        console.log("File read failed:", err)
-        return
-    }
-    try {
-      const users = JSON.parse(jsonString)
-      // console.log('File data:', users)
-      return users;
-    }
-    catch(err) {
-      console.log('Error parsing JSON string:', err)
-    }
-  })
+// //Reads in a json file
+// function readJson(path, users) {
+//   const fs = require('fs')
+//   fs.readFile(path, 'utf8', (err, fileData) => {
+//     if (err) {
+//         console.log("File read failed:", err)
+//         return
+//     }
+//     try {
+//       const users = JSON.parse(fileData)
+//       // console.log('File data:', users)
+//       return users;
+//     }
+//     catch(err) {
+//       console.log('Error parsing JSON string:', err)
+//     }
+//   })
+// }
+
+const fs = require('fs')
+function jsonReader(filePath, cb) {
+    fs.readFile(filePath, (err, fileData) => {
+        if (err) {
+            return cb && cb(err)
+        }
+        try {
+            const object = JSON.parse(fileData)
+            return cb && cb(null, object)
+        } catch(err) {
+            return cb && cb(err)
+        }
+    })
 }
