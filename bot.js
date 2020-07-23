@@ -39,14 +39,12 @@ client.on('message', message => {
 
           // !waifu
     	    case 'waifu':
-            //var users = jsonReader('./waifuScript/waifuUsers.json');
             jsonReader('./waifuScript/waifuUsers.json', (err, users) => {
                 if (err) {
                     console.log(err)
                     message.channel.send('An unexpected error has occurred. Your 30 day free trial of WinRar has expired...');
                     return
                 }
-                console.log(users)
                 const newWaifu = new Waifu(message, args, users);
                 message.channel.send(newWaifu.main());
             })
