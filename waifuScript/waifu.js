@@ -28,11 +28,11 @@ class Waifu {
       this.rString = 'I can set you up with the waifu of your dreams. Type \'!waifu roll\' to roll for a random waifu to get started'
     }
     while(this.rString == '') {
-      if (this.author.username in this.users.name) {
+      if (this.author.username in this.users.Name) {
         // TODO: add the user
         this.rString = 'User exists in the json';
       }
-      this.rString = 'New user detected. You have been added to the database';
+      this.rString = 'New user detected. You have been added to the database. Please re-input your command';
     //   switch(this.args) {
     //     // TODO: add subcommands: roll,
     //   }
