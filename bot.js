@@ -19,9 +19,8 @@ client.on('message', message => {
     var arr = message.content.split(' ');
     var x;
     for (x in arr) {
-      console.log(x);
-      if(responseObject[x]) {
-        message.channel.send(responseObject[x]);
+      if(responseObject[arr[x]]) {
+        message.channel.send(responseObject[arr[x]]);
       }
     }
 
