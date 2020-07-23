@@ -21,7 +21,7 @@ class Waifu {
   // }
 
 
-  main() {
+  main(users) {
     // Keep running as long as there is no determined output
     console.log(this.users);
     if(this.args == 'help'){
