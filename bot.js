@@ -15,6 +15,8 @@ const responseObject = {
   "kira": "Watashi no na wa Kira Yoshikage. Nenre san-juu-san sai. Jitaku wa Morioh-cho hokuto bu no bessou chitai ni ari, kekkon wa shiteinai. Shigoto wa Kame Yu chuun den no kaishain de mainichi osuku tomo yoru hachi ji made niwa kitakusuru. Tabako wa suwanai, sake wa tashinamu tedo. Yoru juu-ichi niwa toko ni tsuki, kanarazu hachi jikan wa suimin o toru you ni shiteiru. Neru mae ni atatakai miruku o nomi. Nijuu bun hodo no sutorecchi de karada o hogushite kara toko ni tsukuto. Hotondo asa made jukusui sai. Akanbou no you ni hirou ya sutoresu o nokosazu ni, asa me o samaserun da. Kenkou shindan demo ijou na shito iwaretai you. Watashi wa tsuneni kokoro no heon o negatte ikiteru ningen toiu koto o setsume shiteiru noda yo. \n \nKachimake ni kodawattari atama o kakaeru you na toraburu toka yoru mo nemurenai toitta teki o tsukuranai... toiu no ga, watashi no shakai ni taisuru shise de ari, sore ga jibun no koufuku da toiu koto o shitteiru. Mottomo tatakatta toshitemo watashi wa dare nimo maken gane.",
   "classified": {files: ['./images/its_classified.gif']},
   "Lockheed": {files: ['./images/its_classified.gif']},
+  "lockheed": {files: ['./images/its_classified.gif']},
+  "Grumann": {files: ['./images/its_classified.gif']},
   "Lockheed Martin": {files: ['./images/its_classified.gif']}
 };
 
