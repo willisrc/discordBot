@@ -55,7 +55,8 @@ client.on('message', message => {
           case 'saucelist':
             fs.readFile('files/copypastas.txt', (err, data) => {
                 if (err) throw err;
-              message.channel.send(data);
+                var a = data.toString();
+              message.channel.send(a);
             });
           break;
 
