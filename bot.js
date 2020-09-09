@@ -51,6 +51,14 @@ client.on('message', message => {
             message.channel.send('http://www.nhentai.com/g/' + i);
           break;
 
+          // !saucelist
+          case 'saucelist':
+            fs.readFile('files/copypastas.txt', (err, data) => {
+                if (err) throw err;
+              message.channel.send(data);
+            });
+          break;
+
           // !waifu
     	    case 'waifu':
             jsonReader('./waifuScript/waifuUsers.json', (err, users) => {
