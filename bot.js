@@ -56,7 +56,7 @@ client.on('message', message => {
             fs.readFile('files/copypastas.txt', (err, data) => {
                 if (err) throw err;
                 var str = data.toString();
-                chop(str, message, max);
+                chop(str, message, 2000);
             });
           break;
 
