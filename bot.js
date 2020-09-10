@@ -216,6 +216,6 @@ function chop(str, message, max) {
   var remaining = str.slice(max+1);
   message.channel.send('msg');
   console.log(remaining.length);
-  chop(remaining, message);
+  chop(remaining, message, max);
  }
 }
