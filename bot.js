@@ -55,8 +55,8 @@ client.on('message', message => {
           case 'saucelist':
             fs.readFile('files/copypastas.txt', (err, data) => {
                 if (err) throw err;
-                var a = data.toString();
-              message.channel.send(a);
+                var str = data.toString();
+                chop(str, message, max);
             });
           break;
 
@@ -205,4 +205,16 @@ function jsonReader(filePath, cb) {
             return cb && cb(err)
         }
     })
+}
+
+function chop(str, message, max) {
+ if (str.length <= max){
+  message.channel.send('str');
+ }
+ else {
+  var msg = str.splice(0,max+1);
+  var remaining = str.splice(max+1);
+  message.channel.send('msg');
+  chop(remaining, message);
+ }
 }
