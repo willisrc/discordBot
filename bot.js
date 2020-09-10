@@ -208,12 +208,12 @@ function jsonReader(filePath, cb) {
 }
 
 function chop(str, message, max) {
- if (str.length <= max){
+ if (str.length < max){
   message.channel.send(str);
  }
  else {
-  var msg = str.slice(0,max+1);
-  var remaining = str.slice(max+1);
+  var msg = str.slice(0,max);
+  var remaining = str.slice(max);
   message.channel.send(msg);
   console.log(remaining.length);
   chop(remaining, message, max);
