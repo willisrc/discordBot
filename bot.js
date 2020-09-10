@@ -53,7 +53,7 @@ client.on('message', message => {
 
           // !saucelist
           case 'saucelist':
-            fs.readFile('files/copypastas.txt', (err, data) => {
+            fs.readFile('files/sauce.txt', (err, data) => {
                 if (err) throw err;
                 var str = data.toString();
                 chop(str, message, 2000);
