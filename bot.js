@@ -47,7 +47,7 @@ client.on('message', message => {
 
     	    // !saucerandom
     	    case 'saucerandom':
-            message.channel.send('http://www.nhentai.net/random');
+            message.channel.send("https://www.nhentai.net/random");
           break;
 
           // !saucelist
