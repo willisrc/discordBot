@@ -47,8 +47,7 @@ client.on('message', message => {
 
     	    // !saucerandom
     	    case 'saucerandom':
-            var i = Math.floor(Math.random() * 1000000);
-            message.channel.send('http://www.nhentai.com/g/' + i);
+            message.channel.send('http://www.nhentai.net/random');
           break;
 
           // !saucelist
