@@ -24,9 +24,6 @@ const responseObject = {
 
 
 client.on('message', message => {
-    //ignore messages from self
-    if (self) return;
-
     //Response Messages
     var arr = message.content.split(' ');
     var x;
