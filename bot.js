@@ -24,12 +24,22 @@ const responseObject = {
 
 
 client.on('message', message => {
+    //ignore messages from self
+    if (self) return;
+
     //Response Messages
     var arr = message.content.split(' ');
     var x;
     for (x in arr) {
       if(responseObject[arr[x]]) {
         message.channel.send(responseObject[arr[x]]);
+      }
+    }
+
+    //the game
+    for (x in arr) {
+      if(message.content.contains("lost the game")) {
+        client.delete_message(message);
       }
     }
 
