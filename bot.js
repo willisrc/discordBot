@@ -35,7 +35,7 @@ client.on('message', message => {
 
     //the game
     for (x in arr) {
-      if(message.content.contains("lost the game")) {
+      if(message.content.includes("lost the game")) {
         client.delete_message(message);
       }
     }
