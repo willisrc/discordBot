@@ -38,7 +38,7 @@ client.on('message', message => {
       if(message.content.includes("lost the game")) {
         message.delete();
         console.log(message);
-        // message.channel.send(`That wasn't very cash money of you, @${message.content.username}`);
+        message.channel.send(`That wasn't very cash money of you, @${message.author.username}`);
       }
     }
 
