@@ -39,6 +39,7 @@ client.on('message', message => {
         message.delete();
         console.log(message);
         message.channel.send(`That wasn't very cash money of you, @${message.author.username}`);
+        return
       }
     }
 
