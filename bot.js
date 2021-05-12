@@ -37,6 +37,8 @@ client.on('message', message => {
     for (x in arr) {
       if(message.content.includes("lost the game")) {
         message.delete();
+        console.log(message.content);
+        // message.channel.send(`That wasn't very cash money of you, @${message.content.username}`);
       }
     }
 
